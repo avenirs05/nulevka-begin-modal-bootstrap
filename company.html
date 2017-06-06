@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="format-detection" content="telephone=no" />
+	
+	<title>Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.theme.css" rel="stylesheet">
+    <link href="css/jquery-ui.structure.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="functions.js"></script>
+    <script src="events.js"></script>
+
+<script>
+
+$(function () {
+       
+    var regExpInn = /^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
+
+    $('#inn').blur(function() {
+        if ( $(this).val().match(regExpInn) == null ) {
+            $(this).css('color', 'red');
+        } else $(this).css('color', '#000000');
+    });
+
+    $('#inn').focus(function() {
+        $(this).css('color', '#000000');
+    });
+
+                   
+});
+
+</script>    
+    <style>
+        body {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<form id="form-tax-system" action="">
+    <div id="div-tax-system">
+        <span>Выберите систему налогообложения:</span><br>        
+        <label class="tax-system-answer" for="general"><input id="general" type="radio" name="tax-system" value="general">Общая</label><br>
+        <div style="display: none" class="tax-answer-0"></div>  
+        <div id="choice-quarters" style="display: none"><i><span>Выберите период</span></i><br>
+            <div><label for="qrt-2-2017"><input id="qrt-2-2017" type="checkbox" name="qrt-2-2017" checked>2-й квартал 2017 года</label></div>            
+            <a id="another-periods" href="#" onclick="return false;">Другие периоды</a><br>
+            <div><label style="display: none;" for="qrt-1-2017"><input id="qrt-1-2017" type="checkbox" name="qrt-1-2017">1-й квартал 2017 года</label></div>
+            <div><label style="display: none;" for="qrt-4-2016"><input id="qrt-4-2016" type="checkbox" name="qrt-4-2016">4-й квартал 2016 года</label></div>
+            <p style="display: none" id="uk-question-0"><strong>Как внесен уставной капитал?</strong><br>
+                <label for="money-0"><input id="money-0" type="radio" name="deposit-uk-4-2016" value="money-0">Деньгами</label><br>
+                <label for="things-0"><input id="things-0" type="radio" name="deposit-uk-4-2016" value="things-0">Имуществом</label><br>
+            </p>        
+            <div><label style="display: none;" for="qrt-3-2016"><input id="qrt-3-2016" type="checkbox" name="qrt-3-2016">3-й квартал 2016 года</label></div>
+            <div><label style="display: none;" for="qrt-2-2016"><input id="qrt-2-2016" type="checkbox" name="qrt-2-2016">2-й квартал 2016 года</label></div>
+            <div><label style="display: none;" for="qrt-1-2016"><input id="qrt-1-2016" type="checkbox" name="qrt-1-2016">1-й квартал 2016 года</label></div>
+            <div><label style="display: none;" for="qrt-4-2015"><input id="qrt-4-2015" type="checkbox" name="qrt-4-2015">4-й квартал 2015 года</label></div>
+            <p style="display: none" id="uk-question-1"><strong>Как внесен УК?</strong><br>
+                <label for="money-1"><input id="money-1" type="radio" name="deposit-uk-4-2015" value="money-1">Деньгами</label><br>
+                <label for="things-1"><input id="things-1" type="radio" name="deposit-uk-4-2015" value="things-1">Имуществом</label><br>
+            </p>        
+            <div><label style="display: none;" for="qrt-3-2015"><input id="qrt-3-2015" type="checkbox" name="qrt-3-2015">3-й квартал 2015 года</label></div>
+            <div><label style="display: none;" for="qrt-2-2015"><input id="qrt-2-2015" type="checkbox" name="qrt-2-2015">2-й квартал 2015 года</label></div>
+            <div><label style="display: none;" for="qrt-1-2015"><input id="qrt-1-2015" type="checkbox" name="qrt-1-2015">1-й квартал 2015 года</label></div>
+            <div><label style="display: none;" for="qrt-4-2014"><input id="qrt-4-2014" type="checkbox" name="qrt-4-2014">4-й квартал 2014 года</label></div>
+            <p style="display: none" id="uk-question-2"><strong>Как внесен УК?</strong><br>
+                <label for="money-2"><input id="money-2" type="radio" name="deposit-uk-4-2014" value="money-2">Деньгами</label><br>
+                <label for="things-2"><input id="things-2" type="radio" name="deposit-uk-4-2014" value="things-2">Имуществом</label><br>
+            </p>        
+            <div><label style="display: none;" for="qrt-3-2014"><input id="qrt-3-2014" type="checkbox" name="qrt-3-2014">3-й квартал 2014 года</label></div>
+            <div><label style="display: none;" for="qrt-2-2014"><input id="qrt-2-2014" type="checkbox" name="qrt-2-2014">2-й квартал 2014 года</label></div><br>
+        </div>  
+        <label class="tax-system-answer" for="simple"><input id="simple" type="radio" name="tax-system" value="simple">Упрощенная</label><br>
+        <div style="display: none" class="tax-answer-1"></div>        
+        <label class="tax-system-answer" for="envd"><input id="envd" type="radio" name="tax-system" value="envd">Другая<br></label><br>
+        <div style="display: none" class="tax-answer-2">Контент если выбрано Другая</div>        
+        <label class="tax-system-answer" for="not-know"><input id="not-know" type="radio" name="tax-system" value="not-know">Я не знаю</label><br>
+        <div style="display: none" class="tax-answer-3">Контент если выбрано Я не знаю какая система налоговая</div><br>        
+        <button id="btn-next-tax-system" style="display: none;">Дальше</button>
+    </div>
+    
+    <div id="div-tranz" style="display: none">
+        <span>Были ли движения по расчетному счету?</span><br>
+        <label for="tranz-yes"><input id="tranz-yes" type="radio" name="tranz" value="tranz-yes">Да</label><br>
+        <label for="tranz-no"><input id="tranz-no" type="radio" name="tranz" value="tranz-no">Нет</label><br>
+        <button id="btn-back-tranz">Назад</button> 
+        <button id="btn-next-tranz" style="display: none;">Дальше</button> 
+    </div>
+
+    <div id="div-base" style="display: none">
+        <span>Какая у Вас база налогообложения?</span><br>
+        <label for="base-inc"><input id="base-inc" type="radio" name="base" value="base-inc">Доходы</label><br>
+        <label for="base-inc-spent"><input id="base-inc-spent" type="radio" name="base" value="base-inc-spent">Доходы минус расходы</label><br>
+        <button id="btn-back-base">Назад</button> 
+        <button id="btn-next-base" style="display: none;">Дальше</button> 
+    </div>
+
+    <div id="div-one-face" style="display: none">
+        <span>У Вас единственный учредитель и он же директор (генеральный директор)?</span><br>        
+        <label for="one-face-yes"><input id="one-face-yes" type="radio" name="one-face" value="one-face-yes">Да</label><br>
+        <label for="one-face-no"><input id="one-face-no" type="radio" name="one-face" value="one-face-no">Нет</label><br>
+        <button id="btn-back-one-face">Назад</button>
+        <button id="btn-next-one-face" style="display: none;">Дальше</button>  
+    </div>
+
+    <div id="div-szv-quest" style="display: none">
+        <span>Сдавали ли Вы форму СЗВ-М?</span><br>        
+        <label for="szv-quest-yes"><input id="szv-quest-yes" type="radio" name="szv-quest" value="szv-quest-yes">Да</label><br>
+        <label for="szv-quest-no"><input id="szv-quest-no" type="radio" name="szv-quest" value="szv-quest-no">Нет</label><br>
+        <div id="choice-months" style="display: none">
+            <i><span>Выберите период, за который сдавался отчет:</span></i><br>
+        </div> 
+        <button id="btn-back-szv-quest">Назад</button>
+        <button id="btn-next-szv-quest" style="display: none;">Дальше</button>  
+    </div>
+
+    <div id="div-will-send" style="display: none">
+        <span id="span-we-will-send">Мы за Вас подготовим:</span>
+        <span id="span-we-will-send-2017" style="display: none;">Мы за Вас подготовим за 2-й квартал 2017 года</span>
+        <div style="display: none;">
+            <label for='decl-nds'><input id='decl-nds' type='checkbox' name='decl-nds' checked><strong>Налоговая декларация по НДС</strong></label>
+        </div>
+        <div style="display: none;">
+            <label for='decl-profit'><input id='decl-profit' type='checkbox' name='decl-profit' checked><strong>Налоговая декларация по налогу на прибыль</strong></label>
+        </div>
+        <div style="display: none;">
+            <label for='decl-one'><input id='decl-one' type='checkbox' name='decl-one' checked><strong>Единая упрощенная декларация</strong></label>
+        </div>
+        <div style="display: none;">
+            <label for='count-ins'><input id='count-ins' type='checkbox' name='count-ins' checked><strong>Расчет по страховым взносам</strong></label>
+        </div>
+        <div style="display: none;">
+            <label for='count-fss'><input id='count-fss' type='checkbox' name='count-fss' checked><strong>Расчетная ведомость в ФСС</strong></label>
+        </div>
+
+        <div style="display: none;">
+            <label for='szv-m'><input id='szv-m' type='checkbox' name='szv-m' checked><strong>СЗВ-М</strong></label>
+        </div>
+    </div>
+
+    <div id="div-from-customer" style="display: none;">
+        <div style="display: none;"><div>Количество работников</div><input id="cnt-workers" type="text" name="cnt-workers"></div>
+        <div style="display: none;"><div>СНИЛС директора</div><input id="snils-dir" type="text" name="snils-dir"></div>
+        <div><div>Название компании</div><input id="company-name" type="text" name="company-name"></div>
+        <div><div>Инн</div><input id="inn" type="text" name="inn"></div>
+        <div><div>Телефон</div><input id="phone" type="text" name="phone"></div>
+        <div><div>Email</div><input id="email" type="text" name="email"></div>
+        <button id="btn-back-will-send">Назад</button>
+        <input type="submit" value="Перейти к оплате" disabled></input>
+    </div>
+
+    <div id="dialog-callback" title="" style="display: none;">
+        <form action="">
+                <span class="title-input">Имя:</span>
+                <input type="text" name="name" placeholder="Введите имя">
+                <span class="title-input">Телефон: <span class="red">*</span></span>
+                <input type="text" name="phone" placeholder="Введите номер телефона" required>
+                <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+	<div class="modal fade" id="modal-envd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        ...Modal envd
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="modal-not-know" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        ...Modal not know
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</form>
+
+
+</body>
+</html>

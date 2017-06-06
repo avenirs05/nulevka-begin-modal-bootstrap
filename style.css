@@ -1,0 +1,319 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+ul, li, span {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;	
+}
+
+/*.colors {
+	синий: #028090;
+	красный: #E7382B;
+	фон главной: #F1F1F1;
+
+	/*font-family: 'Open Sans Condensed', sans-serif;*/
+	/*font-family: 'Open Sans:700', sans-serif;
+
+}*/
+
+
+.border {
+	border: 1px solid black;
+}
+
+.bold {
+	font-weight: bold;
+
+}
+
+.red {
+	color: #C1272D;	
+	font-size: 14px;
+}
+
+.header {
+	background-color: #028090;
+	color: #ffffff;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.header .col-md-12 {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.header img {
+	float: left;
+}
+
+.header .right-side {
+	float: right;
+	margin-top: 5px;
+	display: flex;
+}
+
+.header button {	
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	margin-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #028090;
+	border: 2px solid #ffffff;
+	border-radius: 3px;
+} 
+
+.header button:hover {	
+	background-color: #E7382B;
+} 
+
+.header .phone-digits {
+	font-size: 36px;
+	font-family: 'Open Sans Condensed', sans-serif;
+} 
+
+.header .glyphicon-earphone {
+	font-size: 25px;
+}
+
+.main-screen {
+	background-color: #F1F1F1;
+	height: 100vh;
+}
+
+.main-screen .adv-ipad {
+	background-color: #F1F1F1;
+}
+
+.main-screen col-md-12 {
+	background-color: #F1F1F1;
+}
+
+.main-screen h1, h3 {
+	text-align: center;
+}
+
+.main-screen h1 {
+	font-size: 42px;
+	font-weight: 700;
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-top: 20px;
+}
+
+.main-screen h3 {
+	font-size: 32px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 600;
+	margin-top: 0px;
+}
+
+.main-screen .ipad {
+	background-image: url("imgs/tablet.png");
+	background-repeat: no-repeat;
+	height: 80vh;
+	background-size: cover;
+	margin-top: 20px;
+}
+
+.main-screen ul {
+	font-size: 28px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	margin-top: 0px;
+	list-style-type: none;
+	display: inline-block;
+	padding-left: 65px;
+}
+
+.main-screen ul span {
+	vertical-align: bottom;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.main-screen li {
+	margin-top: 30px;
+	clear: both;
+}
+
+.main-screen .col-md-7 .ipad {
+	position: relative;
+}
+
+.main-screen .btn-inside-ipad-1 {
+	position: absolute;
+	left: 24%;
+	top: 18%;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 5px;
+	background-color: #E7382B;
+	color: #ffffff;
+	border: none;
+	width: 252px;
+}
+
+.main-screen .btn-inside-ipad-1:hover {
+	background-color: #028090;
+}
+
+.main-screen .btn-inside-ipad-2 {
+	top: 36%;
+}
+
+.main-screen .btn-inside-ipad-2:hover {
+	background-color: #028090;
+}
+
+.main-screen .btn-inside-ipad-3 {
+	top: 54%;
+	border: 1px solid #000000;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.main-screen .btn-inside-ipad-3:hover {
+	background-color: #028090;
+	color: #ffffff;
+}
+
+@media screen and (max-device-width: 1365px) {
+	.main-screen ul {
+		font-size: 22px;
+	}
+	.main-screen li img {
+		width: 25px;
+		height: 36px;
+	}
+}
+
+
+@media screen and (min-device-width: 1600px) {
+	.header .phone-digits {
+		font-size: 41px;
+	} 
+	.header button {	
+		font-size: 22px;
+		padding-left: 20px;
+		padding-right: 20px;
+	} 
+	.main-screen h1 {
+		font-size: 48px;
+	}
+	.main-screen h3 {
+		font-size: 37px;
+	}
+	.main-screen li {
+		margin-top: 50px;
+	}
+	.main-screen ul {
+		font-size: 36px;
+	}
+	.main-screen .btn-inside-ipad-1 {
+		width: 380px;
+		font-size: 22px;
+	}
+}
+
+@media screen and (min-device-width: 1920px) {
+	.header .phone-digits {
+		font-size: 46px;
+	}
+	.header button {	
+		font-size: 26px;
+		padding-left: 25px;
+		padding-right: 25px;
+	} 
+	.main-screen h1 {
+		font-size: 53px;
+		font-weight: 700;
+		font-family: 'Open Sans Condensed', sans-serif;
+		margin-top: 20px;
+	}
+	.main-screen h3 {
+		font-size: 41px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		margin-top: 0px;
+	}
+	.main-screen ul {
+		font-size: 44px;
+	}
+	.main-screen li {
+		margin-top: 60px;
+	}
+	.main-screen .btn-inside-ipad-1 {
+		width: 380px;
+		font-size: 26px;
+	}
+}
+
+
+@media screen and (max-device-width: 991px) {
+
+}
+
+@media screen and (max-device-width: 767px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
