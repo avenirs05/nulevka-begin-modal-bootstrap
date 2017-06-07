@@ -14,6 +14,26 @@
 //     } else $('#uk-question-2').hide();
 // }
 
+//Новая функция
+
+function showAndHideParentCheckbox () {
+    var divs = $(this).parent().parent().siblings();
+    var childrElem = $(this).parent().parent().parent().children();
+    if ( $(this).prop('checked') ) {
+        divs.eq(0).children('input').prop('checked', true);
+    }         
+    for (var i = 1; i < childrElem.length; i++) {
+        if ( childrElem.eq(i).children('label').children('input').prop('checked') ) {
+            break;
+        }
+        if ( i == (childrElem.length - 1) ) {
+            if ( childrElem.eq(i).children('label').children('input').prop('checked') == false ) {
+                divs.eq(0).children('input').prop('checked', false);
+            }
+        }
+    }
+}
+
 // function findYear (str) {
 //     if (str.match(/2017/)) {
 //         return '2017';
@@ -206,23 +226,7 @@ function showAndHideChildChecks (reportId) {
 //     }
 // } 
 
-function insertDeclNdsIfIpIfQuartIs4 () {
-    if ( $('#general-ip').prop('checked') && 
-       (  $('#qrt-4-2014').prop('checked') || 
-          $('#qrt-4-2015').prop('checked') || 
-          $('#qrt-4-2016').prop('checked') ) )  
-    {
-        if ( $('#qrt-4-2016').prop('checked') ) {
-            $('#div-from-customer-ip').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2016" checked>Налоговая декларация по НДС за 4-й квартал 2016 года</label></div>');
-        }
-        if ( $('#qrt-4-2015').prop('checked') ) {
-            $('#div-from-customer-ip').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2015" checked>Налоговая декларация по НДС за 4-й квартал 2015 года</label></div>');
-        }
-        if ( $('#qrt-4-2014').prop('checked') ) {
-            $('#div-from-customer-ip').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2014" checked>Налоговая декларация по НДС за 4-й квартал 2014 года</label></div>');
-        }
-    }  
-}
+//Новая функция
 
 function insertDeclNdflIfIpIfQuartIs4 () {
     if ( $('#general-ip').prop('checked') && 
