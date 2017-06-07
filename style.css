@@ -149,7 +149,7 @@ a {
 .main-screen .btn-inside-ipad-1 {
 	position: absolute;
 	left: 24%;
-	top: 18%;
+	top: 14.5%;
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	padding-left: 25px;
@@ -168,7 +168,7 @@ a {
 }
 
 .main-screen .btn-inside-ipad-2 {
-	top: 36%;
+	top: 32.5%;
 }
 
 .main-screen .btn-inside-ipad-2:hover {
@@ -176,7 +176,7 @@ a {
 }
 
 .main-screen .btn-inside-ipad-3 {
-	top: 54%;
+	top: 50.5%;
 	border: 1px solid #000000;
 	color: #000000;
 	background-color: #ffffff;
@@ -184,6 +184,10 @@ a {
 
 .main-screen .btn-inside-ipad-3:hover {
 	background-color: #028090;
+	color: #ffffff;
+}
+
+.ipad a {
 	color: #ffffff;
 }
 

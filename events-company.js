@@ -17,14 +17,14 @@ $(function () {
     $("#envd").change(function () {
         $('#choice-quarters').hide();
         $('#modal-envd').modal('show');
-        $('#btn-next-tax-system').show();
+        $('#btn-next-tax-system').hide();
     });
     
 
     $("#not-know").change(function () {
         $('#choice-quarters').hide();
         $('#modal-not-know').modal('show')
-        $('#btn-next-tax-system').show();
+        $('#btn-next-tax-system').hide();
     });
     
     $("#qrt-4-2016, #qrt-4-2015, #qrt-4-2014").change(showAndHideUK);
@@ -325,15 +325,6 @@ $(function () {
                 } else inputs.eq(i).prop('checked', false);              
             }
         }
-        // if ( ($('#szv-quest-no').prop('checked') == false) && ($('#szv-quest-yes').prop('checked') == false) ) {
-        //     $('#div-will-send').hide();
-        //     $('#div-from-customer').hide();
-        //     $(".periods-will-send").remove();
-        //     $('#div-one-face').show();  
-        //     $('#span-we-will-send-2017').hide(); 
-        //     $('#choice-months').hide();
-        //     $('.month').remove();
-        // }
 
         if ( ($('#one-face-yes').prop('checked')) ) {
             $('#div-will-send').hide();

@@ -1,28 +1,4 @@
-var showAndHideTaxSystem = function () {
-    var allInputs = $('.tax-system-answer > input');
-    for (var i = 0; i < allInputs.length; i++) {
-        if (allInputs.eq(i).prop('checked') ) {
-            if (i === 0) {                    
-                $('.tax-answer-0').after( $('#choice-quarters') );
-                $('.tax-answer-0').show();
-                $('#choice-quarters').show();
-                $('#btn-next-tax-system').show();
-            } 
-            else if (i === 1) {
-                $('.tax-answer-1').after( $('#choice-quarters') );
-                $('.tax-answer-1').show();
-                $('#choice-quarters').show();
-                $('#btn-next-tax-system').show();
-            }
-            else {
-                $('#choice-quarters').hide();
-                $('.tax-answer-' + i).show();
-                $('#btn-next-tax-system').show();
-            }
-        } 
-        else $('.tax-answer-' + i).hide();                
-    }
-}
+var regExpInn = /^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
 
 var showAndHideUK = function () {
     if (($('#qrt-4-2016')).prop('checked')) {
