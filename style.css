@@ -187,6 +187,14 @@ a {
 	color: #ffffff;
 }
 
+/*Начало. Переопределенные стили Bootstrap.*/
+
+.modal-backdrop.in {
+	opacity: .5;
+}
+
+/*Конец. Переопределенные стили Bootstrap.*/
+
 @media screen and (max-device-width: 1365px) {
 	.main-screen ul {
 		font-size: 22px;

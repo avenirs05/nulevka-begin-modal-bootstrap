@@ -24,21 +24,9 @@
 
 <script>
 
-$(function () {
-       
-    var regExpInn = /^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
+$(function () {   
+    
 
-    $('#inn').blur(function() {
-        if ( $(this).val().match(regExpInn) == null ) {
-            $(this).css('color', 'red');
-        } else $(this).css('color', '#000000');
-    });
-
-    $('#inn').focus(function() {
-        $(this).css('color', '#000000');
-    });
-
-                   
 });
 
 </script>    
@@ -157,10 +145,10 @@ $(function () {
         <div style="display: none;"><div>СНИЛС директора</div><input id="snils-dir" type="text" name="snils-dir"></div>
         <div><div>Название компании</div><input id="company-name" type="text" name="company-name"></div>
         <div><div>Инн</div><input id="inn" type="text" name="inn"></div>
-        <div><div>Телефон</div><input id="phone" type="text" name="phone"></div>
+        <div><div>Телефон<span class="red">*</span></div><input id="phone" type="text" name="phone"></div>
         <div><div>Email</div><input id="email" type="text" name="email"></div>
         <button id="btn-back-will-send">Назад</button>
-        <input type="submit" value="Перейти к оплате" disabled></input>
+        <input type="submit" value="Перейти к оплате" name="go-to-pay" disabled></input>
     </div>
 
     <div id="dialog-callback" title="" style="display: none;">
@@ -174,40 +162,40 @@ $(function () {
     </div>
 
 	<div class="modal fade" id="modal-envd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-	      </div>
-	      <div class="modal-body">
-	        ...Modal envd
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		            <h4 class="modal-title" id="myModalLabel">Согласно письму Минфина РФ от 01.01.2011г. № 777 нулевая отчетность по ЕНВД не предусмотрена. Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+	            </div>
+	            <div class="modal-body">
+					<div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
+					<div><div>Телефон<span class="red">*</span></div><input id="phone-envd" type="text" name="phone-envd"></div>
+					<div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
+					<input type="submit" value="Отправить" name="submit-envd"></input>
+	            </div>
+	        </div>
 	    </div>
-	  </div>
 	</div>
 
 	<div class="modal fade" id="modal-not-know" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-	      </div>
-	      <div class="modal-body">
-	        ...Modal not know
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		            <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+	            </div>
+	            <div class="modal-body">
+					<div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
+					<div><div>Телефон<span class="red">*</span></div><input id="phone-envd" type="text" name="phone-envd"></div>
+					<div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
+					<input type="submit" value="Отправить" name="submit-envd"></input>
+	            </div>
+	        </div>
 	    </div>
-	  </div>
 	</div>
+
+
 
 </form>
 

@@ -404,4 +404,14 @@ $(function () {
         }
     });
 
+    $('#inn').blur(function() {
+        if ( $(this).val().match(regExpInn) == null ) {
+            $(this).css('color', 'red');
+        } else $(this).css('color', '#000000');
+    });
+
+    $('#inn').focus(function() {
+        $(this).css('color', '#000000');
+    });
+
 });
