@@ -13,6 +13,51 @@ $(function () {
         $('#choice-quarters').show();
         $('#btn-next-tax-system-ip').show();
     });
+
+    $("#btn-next-tax-system-ip").click(function() {
+        if ( $('#simple-ip').prop('checked') ) {
+            alert('simple-ip!')
+        }
+        if ( $('#general-ip').prop('checked') ) {
+            if ( $("#qrt-4-2016").prop('checked') || 
+                 $("#qrt-4-2015").prop('checked') || 
+                 $("#qrt-4-2014").prop('checked') ) 
+            {                
+                $('#decl-nds').parent().parent().show();
+                showInputsWillSend('#decl-nds');
+                insertDeclNdflIfIpIfQuartIs4();
+                $('#div-tax-system').hide();
+                $('#div-will-send').show();
+                $('#span-we-will-send').show();                
+                $('#div-from-customer-ip').show();            
+            } 
+            else {
+                $('#decl-nds').parent().parent().show();
+                showInputsWillSend('#decl-nds');
+                $('#div-tax-system').hide();
+                $('#div-will-send').show();
+                $('#span-we-will-send').show();                
+                $('#div-from-customer-ip').show();   
+            }
+        }
+    });
+
+    $("#decl-nds").change(function() { showAndHideChildChecks (this); });
+
+    $("#another-periods").click(function() {
+        var anotherPeriodsColl = $('#another-periods').siblings('div').children('label').children('input:not(#qrt-2-2017)');     
+        for (var i = 0; i < $(anotherPeriodsColl).length; i++) {
+            var anotherPeriodsInput = anotherPeriodsColl.eq(i).parent();
+            if (anotherPeriodsInput.css('display') == "none") {
+               anotherPeriodsInput.show(); 
+            } 
+            else 
+                anotherPeriodsInput.hide();
+                $('#uk-question-0').hide();
+                $('#uk-question-1').hide();
+                $('#uk-question-2').hide();
+        }            
+    });
     
     // $("#envd").change(function () {
     //     $('#choice-quarters').hide();
@@ -59,27 +104,7 @@ $(function () {
     //     }
     // });
 
-    $("#btn-next-tax-system-ip").click(function() {
-        if ( $('#simple-ip').prop('checked') ) {
-            alert('simple-ip!')
-        }
-        if ( $('#general-ip').prop('checked') ) {
-            if ( $("#qrt-4-2016").prop('checked') || 
-                 $("#qrt-4-2015").prop('checked') || 
-                 $("#qrt-4-2014").prop('checked') ) 
-            {
-                insertDeclNdsIfIpIfQuartIs4();
-                // insertDeclNdflIfIpIfQuartIs4 ();
-                $('#div-will-send').show();
-                $('#span-we-will-send').show();
-                $('#div-tax-system').hide();
-                $('#div-from-customer').show();            
-            } 
-            else {
-                alert('not-4 qv! general');    
-            }
-        }
-    });
+
 
     // $("#btn-back-tranz").click(function() {
     //     $('#div-tranz').hide();
@@ -193,7 +218,7 @@ $(function () {
     //     $('#div-one-face').show();         
     // });
 
-    $("#btn-next-szv-quest").click(function() {
+    // $("#btn-next-szv-quest").click(function() {
         // if ( $('#szv-quest-no').prop('checked') ) { 
         //     $('.month').remove(); 
         // }
@@ -201,7 +226,7 @@ $(function () {
         // $('#div-szv-quest').hide();
         // $('#div-will-send').show();
         // $('#span-we-will-send').show();
-        $('#div-from-customer').show();
+        // $('#div-from-customer').show();
         // $('#snils-dir').parent('div').show();
 
         // if ( $('#tranz-yes').prop('checked') && $('#one-face-yes').prop('checked') ) {            
@@ -269,7 +294,7 @@ $(function () {
         //     showInputsWillSendSzv();
         // }
        
-        insertDeclUsnIfQuartIs4 ();
+        // insertDeclUsnIfQuartIs4 ();
         // insertDiffReportsIfQuartIs4 ();
 
         // if ( $('#qrt-4-2016').prop('checked') || 
@@ -283,7 +308,7 @@ $(function () {
         //     $('#snils-dir').parent('div').hide();
         // }
 
-    });
+    // });
 
     // $("#btn-back-will-send").click(function() {
     //     $('#snils-dir').parent('div').hide();
@@ -357,22 +382,9 @@ $(function () {
     //     $('#workers-cnt-4-2014').parent('label').parent('div').remove();        
     // });
 
-    $("#another-periods").click(function() {
-        var anotherPeriodsColl = $('#another-periods').siblings('div').children('label').children('input:not(#qrt-2-2017)');     
-        for (var i = 0; i < $(anotherPeriodsColl).length; i++) {
-            var anotherPeriodsInput = anotherPeriodsColl.eq(i).parent();
-            if (anotherPeriodsInput.css('display') == "none") {
-               anotherPeriodsInput.show(); 
-            } 
-            else 
-                anotherPeriodsInput.hide();
-                $('#uk-question-0').hide();
-                $('#uk-question-1').hide();
-                $('#uk-question-2').hide();
-        }            
-    });
 
-    // $("#decl-nds").change(function() { showAndHideChildChecks (this); });
+
+    
     // $("#decl-profit").change(function() { showAndHideChildChecks (this); });
     // $("#count-ins").change(function() { showAndHideChildChecks (this); });
     // $("#count-fss").change(function() { showAndHideChildChecks (this); });

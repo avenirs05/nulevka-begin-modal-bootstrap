@@ -75,31 +75,33 @@
 //     $('#szv-m').parent().parent().hide();        
 // }
 
-// function showInputsWillSend (idOfReport) {
-//     var periods = $('#choice-quarters > div > label');
-//     var inputs = $('#choice-quarters > div > label > input');
-//     var cntQrt = 0;
+function showInputsWillSend (idOfReport) {
+    var periods = $('#choice-quarters > div > label');
+    var inputs = $('#choice-quarters > div > label > input');
+    var cntQrt = 0;
     
-//     for (var i = 0; i < periods.length; i++) {                    
-//         if (inputs.eq(i).prop('checked')) {
-//             cntQrt = cntQrt + 1;
-//         }
-//     }
+    for (var i = 0; i < periods.length; i++) {                    
+        if (inputs.eq(i).prop('checked')) {
+            cntQrt = cntQrt + 1;
+        }
+    }
 
-//     if (cntQrt > 1) {
-//         for (var i = 0; i < periods.length; i++) {                    
-//             if (inputs.eq(i).prop('checked')) {
-//                 $(idOfReport)
-//                     .parent()
-//                     .parent()
-//                     .append("<div class='periods-will-send'><label><input type='checkbox' checked>" + periods.eq(i).text() + "</input></label></div>");
-//             }
-//         }
-//     } else if (cntQrt === 1) { 
-//         $("#span-we-will-send-2017").show();
-//         $("#span-we-will-send").hide();
-//     };
-// }
+    if (cntQrt > 1) {
+        for (var i = 0; i < periods.length; i++) {                    
+            if (inputs.eq(i).prop('checked')) {
+                $(idOfReport)
+                    .parent()
+                    .parent()
+                    .append("<div class='periods-will-send'><label><input type='checkbox' checked>" + periods.eq(i).text() + "</input></label></div>");
+            }
+        }
+    } else if (cntQrt === 1) { 
+        $("#span-we-will-send-2017").show();
+        $("#span-we-will-send").hide();
+    };
+}
+
+     
 
 // function showInputsWillSendSzv () {
 //     if ( ($('div')).is('.month') ) {
@@ -173,20 +175,20 @@
 //     }     
 // }
             
-// function showAndHideChildChecks (reportId) {
-//     if ( $(reportId).prop('checked') == false ) {
-//         var quarter = $(reportId).parent().siblings();
-//         for (var i = 0; i < quarter.length; i++) {
-//             quarter.children('label').children('input').eq(i).prop("checked", false);
-//         }
-//     }
-//     if ( $(reportId).prop('checked')) {
-//         var quarter = $(reportId).parent().siblings();
-//         for (var i = 0; i < quarter.length; i++) {
-//             quarter.children('label').children('input').eq(i).prop("checked", true);
-//         }
-//     }
-// }    
+function showAndHideChildChecks (reportId) {
+    if ( $(reportId).prop('checked') == false ) {
+        var quarter = $(reportId).parent().siblings();
+        for (var i = 0; i < quarter.length; i++) {
+            quarter.children('label').children('input').eq(i).prop("checked", false);
+        }
+    }
+    if ( $(reportId).prop('checked')) {
+        var quarter = $(reportId).parent().siblings();
+        for (var i = 0; i < quarter.length; i++) {
+            quarter.children('label').children('input').eq(i).prop("checked", true);
+        }
+    }
+}    
 
 // function showAndHideChildChecksSzv (reportId) {        
 //     if ( $(reportId).prop('checked') == false ) {
@@ -211,13 +213,13 @@ function insertDeclNdsIfIpIfQuartIs4 () {
           $('#qrt-4-2016').prop('checked') ) )  
     {
         if ( $('#qrt-4-2016').prop('checked') ) {
-            $('#div-from-customer').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2016" checked>Налоговая декларация по НДС за 4-й квартал 2016 года</label></div>');
+            $('#div-from-customer-ip').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2016" checked>Налоговая декларация по НДС за 4-й квартал 2016 года</label></div>');
         }
         if ( $('#qrt-4-2015').prop('checked') ) {
-            $('#div-from-customer').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2015" checked>Налоговая декларация по НДС за 4-й квартал 2015 года</label></div>');
+            $('#div-from-customer-ip').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2015" checked>Налоговая декларация по НДС за 4-й квартал 2015 года</label></div>');
         }
         if ( $('#qrt-4-2014').prop('checked') ) {
-            $('#div-from-customer').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2014" checked>Налоговая декларация по НДС за 4-й квартал 2014 года</label></div>');
+            $('#div-from-customer-ip').before('<div><label for="decl-nds-ip-4-2016"><input id="decl-nds-ip-4-2016" type="checkbox" name="decl-nds-ip-4-2014" checked>Налоговая декларация по НДС за 4-й квартал 2014 года</label></div>');
         }
     }  
 }
@@ -229,13 +231,13 @@ function insertDeclNdflIfIpIfQuartIs4 () {
           $('#qrt-4-2016').prop('checked') ) )  
     {
         if ( $('#qrt-4-2016').prop('checked') ) {
-            $('#div-from-customer').before('<div><label for="decl-ndfl-ip-4-2016"><input id="decl-ndfl-ip-4-2016" type="checkbox" name="decl-ndfl-ip-4-2016" checked>Налоговая декларация 3-НДФЛ за 2016 год</label></div>');
+            $('#div-from-customer-ip').before('<div><label for="decl-ndfl-ip-4-2016"><input id="decl-ndfl-ip-4-2016" type="checkbox" name="decl-ndfl-ip-4-2016" checked>Налоговая декларация 3-НДФЛ за 2016 год</label></div>');
         }
         if ( $('#qrt-4-2015').prop('checked') ) {
-            $('#div-from-customer').before('<div><label for="decl-ndfl-ip-4-2015"><input id="decl-ndfl-ip-4-2015" type="checkbox" name="decl-ndfl-ip-4-2015" checked>Налоговая декларация 3-НДФЛ за 2015 год</label></div>');
+            $('#div-from-customer-ip').before('<div><label for="decl-ndfl-ip-4-2015"><input id="decl-ndfl-ip-4-2015" type="checkbox" name="decl-ndfl-ip-4-2015" checked>Налоговая декларация 3-НДФЛ за 2015 год</label></div>');
         }
         if ( $('#qrt-4-2014').prop('checked') ) {
-            $('#div-from-customer').before('<div><label for="decl-ndfl-ip-4-2014"><input id="decl-ndfl-ip-4-2015" type="checkbox" name="decl-ndfl-ip-4-2014" checked>Налоговая декларация 3-НДФЛ за 2014 год</label></div>');
+            $('#div-from-customer-ip').before('<div><label for="decl-ndfl-ip-4-2014"><input id="decl-ndfl-ip-4-2015" type="checkbox" name="decl-ndfl-ip-4-2014" checked>Налоговая декларация 3-НДФЛ за 2014 год</label></div>');
         }
     }  
 }
