@@ -75,32 +75,6 @@ function hideAllInputsWillSend () {
     $('#szv-m').parent().parent().hide();        
 }
 
-function showInputsWillSend (idOfReport) {
-    var periods = $('#choice-quarters > div > label');
-    var inputs = $('#choice-quarters > div > label > input');
-    var cntQrt = 0;
-    
-    for (var i = 0; i < periods.length; i++) {                    
-        if (inputs.eq(i).prop('checked')) {
-            cntQrt = cntQrt + 1;
-        }
-    }
-
-    if (cntQrt > 1) {
-        for (var i = 0; i < periods.length; i++) {                    
-            if (inputs.eq(i).prop('checked')) {
-                $(idOfReport)
-                    .parent()
-                    .parent()
-                    .append("<div class='periods-will-send'><label><input type='checkbox' checked>" + periods.eq(i).text() + "</input></label></div>");
-            }
-        }
-    } else if (cntQrt === 1) { 
-        $("#span-we-will-send-2017").show();
-        $("#span-we-will-send").hide();
-    };
-}
-
 function showInputsWillSendSzv () {
     if ( ($('div')).is('.month') ) {
 
@@ -173,21 +147,6 @@ function showInputsWillSendSzv () {
     }     
 }
             
-function showAndHideChildChecks (reportId) {
-    if ( $(reportId).prop('checked') == false ) {
-        var quarter = $(reportId).parent().siblings();
-        for (var i = 0; i < quarter.length; i++) {
-            quarter.children('label').children('input').eq(i).prop("checked", false);
-        }
-    }
-    if ( $(reportId).prop('checked')) {
-        var quarter = $(reportId).parent().siblings();
-        for (var i = 0; i < quarter.length; i++) {
-            quarter.children('label').children('input').eq(i).prop("checked", true);
-        }
-    }
-}    
-
 function showAndHideChildChecksSzv (reportId) {        
     if ( $(reportId).prop('checked') == false ) {
         var inputs = $('.month').children('div').children('label').children('input');

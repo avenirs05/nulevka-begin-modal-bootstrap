@@ -336,8 +336,6 @@ $(function () {
             $('.month').remove();
         }
 
-
-
         $('#decl-usn-4-2016').parent('label').parent('div').remove();
         $('#decl-usn-4-2015').parent('label').parent('div').remove();
         $('#decl-usn-4-2014').parent('label').parent('div').remove();
@@ -377,23 +375,7 @@ $(function () {
     $("#decl-one").change(function() { showAndHideChildChecks (this); });
     $("#szv-m").change(function() { showAndHideChildChecksSzv (this); });
 
-    $('#div-will-send').on("change", ".periods-will-send label input", function () {
-        var divs = $(this).parent().parent().siblings();
-        var childrElem = $(this).parent().parent().parent().children();
-        if ( $(this).prop('checked') ) {
-            divs.eq(0).children('input').prop('checked', true);
-        }         
-        for (var i = 1; i < childrElem.length; i++) {
-            if ( childrElem.eq(i).children('label').children('input').prop('checked') ) {
-                break;
-            }
-            if ( i == (childrElem.length - 1) ) {
-                if ( childrElem.eq(i).children('label').children('input').prop('checked') == false ) {
-                    divs.eq(0).children('input').prop('checked', false);
-                }
-            }
-        }
-    });
+    $('#div-will-send').on("change", ".periods-will-send label input", showAndHideParentCheckbox);
 
     $('#inn').blur(function() {
         if ( $(this).val().match(regExpInn) == null ) {
