@@ -213,7 +213,7 @@ input[type="checkbox"] {
 	margin-right: 7px;
 }
 
-#another-periods {
+#another-periods, #years-simple {
 	text-decoration: none;
 	border-bottom: 1px #028090 dashed;
 }
@@ -277,6 +277,92 @@ input[type="checkbox"] {
 #decl-usn-4-2016::parent {
 	font-weight: bold;
 }
+
+#label-decl-usn-4-2016, 
+#label-decl-usn-4-2015,
+#label-decl-usn-4-2014,
+#label-buh-rep-ifns-4-2016,
+#label-buh-rep-ifns-4-2015,
+#label-buh-rep-ifns-4-2014,
+#label-workers-cnt-4-2016,
+#label-workers-cnt-4-2015,
+#label-workers-cnt-4-2014,
+#label-buh-rep-stat-4-2016,
+#label-buh-rep-stat-4-2015,
+#label-buh-rep-stat-4-2014,
+#label-decl-ndfl-ip-4-2016,
+#label-decl-ndfl-ip-4-2015,
+#label-decl-ndfl-ip-4-2014,
+#label-year-2016-ip-simple,
+#label-year-2015-ip-simple,
+#label-year-2014-ip-simple {
+	font-weight: bold;
+}
+
+#div-from-customer {
+	margin-top: 25px;
+	width: 410px;
+	background-color: #F1F1F1;
+	padding-top: 10px;
+	padding-left: 30px;
+	border-radius: 2px;
+}
+
+#div-from-customer input[type="text"] {
+	width: 350px;
+	height: 35px;
+}
+
+#div-from-customer > div {
+	margin-top: 20px;
+}
+
+#div-from-customer > div > div {
+	color: #028090;
+	font-weight: bold;
+}
+
+#div-from-customer input[type="submit"] {
+	background-color: #E7382B;
+	color: #ffffff;
+	width: 216px;
+	height: 40px;
+	border: medium none;
+	border-radius: 2px;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+#div-from-customer input[type="submit"]:hover {
+	background-color: #339933;
+}
+
+#div-from-customer button {
+	margin-top: 25px;
+}
+
+#div-from-customer button:hover {
+	background-color: #B03A32;
+}
+
+#div-years {
+	margin-top: 5px;
+}
+
+#will-prepare-email {
+	margin-bottom: 15px;
+	font-family: Open Sans;
+	font-size: 22px;
+	color: #A52A2A;
+}
+
+
+
+
+
+
 
 /*Конец. Страницы Company и Person*/
 
