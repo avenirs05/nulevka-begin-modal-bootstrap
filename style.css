@@ -11,14 +11,6 @@ a {
 	text-decoration: none;	
 }
 
-input[type="radio"] {
-	margin-right: 7px;
-}
-
-input[type="checkbox"] {
-	margin-right: 7px;
-}
-
 /*.colors {
 	синий: #028090;
 	красный: #E7382B;
@@ -201,13 +193,93 @@ input[type="checkbox"] {
 	color: #ffffff;
 }
 
-/*Страница Company*/
+/*Страницы Company и Person*/
+#label-choice-tax-system {
+	margin-top: 15px;
+}
+
 .questions-wrapper {
 	padding-left: 70px;
 	padding-right: 70px;
 	font-size: 16px;
 	margin-top: 20px; 
 }
+
+input[type="radio"] {
+	margin-right: 7px;
+}
+
+input[type="checkbox"] {
+	margin-right: 7px;
+}
+
+#another-periods {
+	text-decoration: none;
+	border-bottom: 1px #028090 dashed;
+}
+
+#first-another-period {
+	margin-top: 10px;
+}
+
+.question {
+	font-family: Open Sans;
+	font-size: 22px;
+}
+
+.tax-system-answer {
+	color: #A52A2A;
+	font-size: 18px;
+}
+
+#form-tax-system button {
+	background-color: #028090;
+	color: #ffffff;
+	width: 120px;
+	height: 40px;
+	border: medium none;
+	border-radius: 2px;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	margin-top: 15px;
+}
+
+#form-tax-system button:hover {
+	background-color: #E7382B;
+}
+
+#label-tranz-yes, #label-one-face-yes, 
+#label-base-inc, #label-szv-quest-yes  {
+	font-size: 18px;
+	margin-top: 15px;
+	color: #A52A2A;
+}
+
+#label-tranz-no, #label-one-face-no,
+#label-base-inc-spent, #label-szv-quest-no {
+	font-size: 18px;
+	color: #A52A2A;
+}
+
+.month {
+	margin-bottom: 5px;
+}
+
+#span-we-will-send {
+	display: block;
+	margin-bottom: 15px;
+	font-family: Open Sans;
+	font-size: 22px;
+	color: #A52A2A;
+}
+
+#decl-usn-4-2016::parent {
+	font-weight: bold;
+}
+
+/*Конец. Страницы Company и Person*/
+
 
 /*Начало. Переопределенные стили Bootstrap.*/
 
