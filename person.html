@@ -46,8 +46,15 @@ $(function () {
         <span>Выберите систему налогообложения:</span><br> 
 
         <label class="tax-system-answer" for="simple-ip"><input id="simple-ip" type="radio" name="tax-system" value="simple-ip">Упрощенная</label><br>
-        <div style="display: none" class="tax-answer-1"></div>  
-
+        <div style="display: none" class="tax-answer-1"></div>
+        <div id="choice-years" style="display: none">
+            <i><a id="years-simple" href="#" onclick="return false;">Выберите период</a></i><br>
+            <div id="div-years">
+                <div><label for="year-2016-ip-simple"><input id="year-2016-ip-simple" type="checkbox" name="year-2016-ip-simple">2016 год</label></div>
+                <div><label for="year-2015-ip-simple"><input id="year-2015-ip-simple" type="checkbox" name="year-2015-ip-simple">2015 год</label></div>      
+                <div><label for="year-2014-ip-simple"><input id="year-2014-ip-simple" type="checkbox" name="year-2014-ip-simple">2014 год</label></div>
+            </div> 
+        </div>    
         <label class="tax-system-answer" for="general-ip"><input id="general-ip" type="radio" name="tax-system" value="general-ip">Общая</label><br>        
         <div style="display: none" class="tax-answer-0"></div>  
         <div id="choice-quarters" style="display: none"><i><span>Выберите период</span></i><br>
@@ -162,7 +169,7 @@ $(function () {
         </form>
     </div>
 
-	<div class="modal fade" id="modal-envd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="modal-envd-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	    <div class="modal-dialog" role="document">
 	        <div class="modal-content">
 	            <div class="modal-header">
@@ -179,9 +186,39 @@ $(function () {
 	    </div>
 	</div>
 
+    <div class="modal fade" id="modal-patent-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Согласно письму Минфина РФ от 01.01.2011г. № 777 при использовании данной системы налогообложения нулевая отчетность не предусмотрена. Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+                </div>
+                <div class="modal-body">
+                    <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
+                    <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-envd"></div>
+                    <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
+                    <input type="submit" value="Отправить" name="submit-envd"></input>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
+    <div class="modal fade" id="modal-not-know-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+                </div>
+                <div class="modal-body">
+                    <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
+                    <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-envd"></div>
+                    <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
+                    <input type="submit" value="Отправить" name="submit-envd"></input>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </form>
 

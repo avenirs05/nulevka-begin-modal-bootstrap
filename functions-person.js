@@ -192,6 +192,25 @@ function insertDeclNdflIfIpIfQuartIs4 () {
     }  
 }
 
+function insertNalogDecl () {
+    if ( $('#simple-ip').prop('checked') && 
+        ( $('#year-2016-ip-simple').prop('checked') || 
+          $('#year-2015-ip-simple').prop('checked') || 
+          $('#year-2014-ip-simple').prop('checked') ) )  
+    {
+        $('#div-from-customer-ip').before('<div id="will-prepare-email"><span>Мы подготовим Вам и отправим на email:</span></div>');
+        if ( $('#year-2016-ip-simple').prop('checked') ) {
+            $('#div-from-customer-ip').before('<div class="nalog-decl"><label for="year-2016-ip-simple"><input id="year-2016-ip-simple" type="checkbox" name="year-2016-ip-simple" checked>Налоговая декларация за 2016 год</label></div>');
+        }
+        if ( $('#year-2015-ip-simple').prop('checked') ) {
+            $('#div-from-customer-ip').before('<div class="nalog-decl"><label for="year-2015-ip-simple"><input id="year-2015-ip-simple" type="checkbox" name="year-2015-ip-simple" checked>Налоговая декларация за 2015 год</label></div>');
+        }
+        if ( $('#year-2014-ip-simple').prop('checked') ) {
+            $('#div-from-customer-ip').before('<div class="nalog-decl"><label for="year-2014-ip-simple"><input id="year-2014-ip-simple" type="checkbox" name="year-2014-ip-simple" checked>Налоговая декларация за 2014 год</label></div>');
+        }
+    }  
+}
+
 // function insertDiffReportsIfQuartIs4 () {
 //     if ( $('#qrt-4-2016').prop('checked') ) {
 //         $('#div-from-customer').before('<div><label for="buh-rep-ifns-4-2016"><input id="buh-rep-ifns-4-2016" type="checkbox" name="buh-rep-ifns-4-2016" checked>Бухгалтерская(финансовая) отчетность за 2016 год в ИФНС</label></div><div><label for="buh-rep-stat-4-2016"><input id="buh-rep-stat-4-2016" type="checkbox" name="buh-rep-stat-4-2016" checked>Бухгалтерская(финансовая) отчетность за 2016 год в Росстат</label></div><div><label for="workers-cnt-4-2016"><input id="workers-cnt-4-2016" type="checkbox" name="workers-cnt-4-2016" checked>Сведения о среднесписочной численности работников за 2016 год</label></div>');
