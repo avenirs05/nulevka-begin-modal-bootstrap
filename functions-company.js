@@ -108,9 +108,11 @@ function showInputsWillSendSzv () {
                 divs.eq(i).css('display', 'none');
             }
         }
+        diffHeaderWeWillSend();
         if ( $('.month > span').length === 1) {
             $('.month > span').hide();
         }
+
     } else {
         $('#btn-next-tax-system').hide();
         $('#choice-months').show();
@@ -141,6 +143,7 @@ function showInputsWillSendSzv () {
             divs.eq(i).children('div').children('label').children('input').prop('checked', true);
         } 
 
+        diffHeaderWeWillSend();
         if ( $('.month > span').length === 1) {
             $('.month > span').hide();
         }

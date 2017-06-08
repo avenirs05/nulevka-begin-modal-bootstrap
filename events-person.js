@@ -35,6 +35,7 @@ $(function () {
                 $('#decl-nds').parent().parent().show();
                 showInputsWillSend('#decl-nds');
                 $('#div-tax-system').hide();
+                
                 $('#div-will-send').show();
                 $('#span-we-will-send').show();                
                 $('#div-from-customer-ip').show();   
@@ -44,14 +45,13 @@ $(function () {
 
     $("#decl-nds").change(function() { showAndHideChildChecks (this); });
 
-    $("#another-periods").click(function() {
+    $("#another-periods").click(function () {
         var anotherPeriodsColl = $('#another-periods').siblings('div').children('label').children('input:not(#qrt-2-2017)');     
         for (var i = 0; i < $(anotherPeriodsColl).length; i++) {
             var anotherPeriodsInput = anotherPeriodsColl.eq(i).parent();
             if (anotherPeriodsInput.css('display') == "none") {
                anotherPeriodsInput.show(); 
-            } 
-            else 
+            } else 
                 anotherPeriodsInput.hide();
                 $('#uk-question-0').hide();
                 $('#uk-question-1').hide();

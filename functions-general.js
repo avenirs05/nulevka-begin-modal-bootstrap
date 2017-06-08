@@ -36,10 +36,12 @@ function showInputsWillSend (idOfReport) {
                     .append("<div class='periods-will-send'><label><input type='checkbox' checked>" + periods.eq(i).text() + "</input></label></div>");
             }
         }
-    } else if (cntQrt === 1) { 
-        $("#span-we-will-send-2017").show();
-        $("#span-we-will-send").hide();
+    } else if (cntQrt < 2) { 
+        $("#span-we-will-send").show();
     };
+
+    diffHeaderWeWillSend ();
+
 }
 
 function showAndHideChildChecks (reportId) {
@@ -55,4 +57,24 @@ function showAndHideChildChecks (reportId) {
             quarter.children('label').children('input').eq(i).prop("checked", true);
         }
     }
+}
+
+function diffHeaderWeWillSend () {
+    var periods = $('#choice-quarters > div > label');
+    var inputs = $('#choice-quarters > div > label > input');
+    var cntQrt = 0;
+    var singleQrt = '';
+    for (var i = 0; i < periods.length; i++) {                    
+        if (inputs.eq(i).prop('checked')) {
+            cntQrt = cntQrt + 1;
+        }
+    }
+    if (cntQrt < 2) {            
+        for (var i = 0; i < periods.length; i++) {                    
+            if (inputs.eq(i).prop('checked')) {
+               singleQrt = inputs.eq(i).parent('label').text();
+            }
+        }
+        $("#span-we-will-send").text( 'Мы подготовим за Вас' + ' за ' + singleQrt);
+    } else $("#span-we-will-send").text( 'Мы подготовим за Вас:');
 }  
