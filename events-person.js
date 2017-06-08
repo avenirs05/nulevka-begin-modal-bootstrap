@@ -34,11 +34,15 @@ $(function () {
             else {
                 $('#decl-nds').parent().parent().show();
                 showInputsWillSend('#decl-nds');
-                $('#div-tax-system').hide();
-                
+                $('#div-tax-system').hide();                
                 $('#div-will-send').show();
                 $('#span-we-will-send').show();                
-                $('#div-from-customer-ip').show();   
+                $('#div-from-customer-ip').show();
+                $('#pasp-ser-ip').parent().hide();
+                $('#pasp-num-ip').parent().hide();
+                $('#pasp-date-issue-ip').parent().hide(); 
+                $('#pasp-who-issue-ip').parent().hide(); 
+                $('#pasp-kp-ip').parent().hide(); 
             }
         }
     });
