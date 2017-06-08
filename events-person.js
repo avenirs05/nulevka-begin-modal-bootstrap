@@ -47,6 +47,15 @@ $(function () {
         }
     });
 
+    $("#btn-back-will-send-ip").click(function() {
+        $('#div-will-send').hide();
+        $('#div-from-customer-ip').hide();
+        $(".periods-will-send").remove();          
+        $('#span-we-will-send').hide(); 
+        $('label:contains("3-НДФЛ")').parent().remove();
+        $('#div-tax-system').show();
+    });
+
     $("#decl-nds").change(function() { showAndHideChildChecks (this); });
 
     $("#another-periods").click(function () {
