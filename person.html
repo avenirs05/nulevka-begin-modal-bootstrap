@@ -21,8 +21,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="functions-general.js"></script>
     <script src="functions-person.js"></script>
-<!--     <script src="events-company.js"></script> -->
     <script src="events-person.js"></script>
+
 
 <script>
 
@@ -33,17 +33,33 @@ $(function () {
 
 </script>    
     <style>
-        body {
-            padding-left: 10px;
-            padding-top: 10px;
-        }
+
     </style>
 </head>
 <body>
 
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col-md-12 visible-md-block visible-lg-block">
+            <img src="imgs/logo.png" alt="">
+            <div class="right-side">
+                <button>Бесплатная консультация</button>
+                <div class="cons-phone">
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+                    <span class="phone-digits">8 800 350 84 70</span> 
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid questions-wrapper">
+<div class="row">
+<div class="col-md-12 visible-md-block visible-lg-block">
+
 <form id="form-tax-system" action="">
     <div id="div-tax-system">
-        <span>Выберите систему налогообложения:</span><br> 
+        <span class="question">Выберите систему налогообложения:</span><br> 
 
         <label class="tax-system-answer" for="simple-ip"><input id="simple-ip" type="radio" name="tax-system" value="simple-ip">Упрощенная</label><br>
         <div style="display: none" class="tax-answer-1"></div>
@@ -75,52 +91,17 @@ $(function () {
         </div>  
       
         <label class="tax-system-answer" for="envd-ip"><input id="envd-ip" type="radio" name="tax-system" value="envd-ip">ЕНВД<br></label><br>
-        <div style="display: none" class="tax-answer-2">Контент если выбрано ЕНВД</div>    
+        <div style="display: none" class="tax-answer-2"></div>    
 
         <label class="tax-system-answer" for="patent-ip"><input id="patent-ip" type="radio" name="tax-system" value="patent-ip">Патент</label><br>
-        <div style="display: none" class="tax-answer-3">Контент если выбрано Патент</div>    
+        <div style="display: none" class="tax-answer-3"></div>    
 
         <label class="tax-system-answer" for="not-know-ip"><input id="not-know-ip" type="radio" name="tax-system" value="not-know-ip">Я не знаю</label><br>
-        <div style="display: none" class="tax-answer-4">Контент если выбрано Я не знаю какая система налоговая</div><br>
+        <div style="display: none" class="tax-answer-4"></div><br>
 
         <button id="btn-next-tax-system-ip" style="display: none;">Дальше</button>
     </div>
     
-    <div id="div-tranz" style="display: none">
-        <span>Были ли движения по расчетному счету?</span><br>
-        <label for="tranz-yes"><input id="tranz-yes" type="radio" name="tranz" value="tranz-yes">Да</label><br>
-        <label for="tranz-no"><input id="tranz-no" type="radio" name="tranz" value="tranz-no">Нет</label><br>
-        <button id="btn-back-tranz">Назад</button> 
-        <button id="btn-next-tranz" style="display: none;">Дальше</button> 
-    </div>
-
-    <div id="div-base" style="display: none">
-        <span>Какая у Вас база налогообложения?</span><br>
-        <label for="base-inc"><input id="base-inc" type="radio" name="base" value="base-inc">Доходы</label><br>
-        <label for="base-inc-spent"><input id="base-inc-spent" type="radio" name="base" value="base-inc-spent">Доходы минус расходы</label><br>
-        <button id="btn-back-base">Назад</button> 
-        <button id="btn-next-base" style="display: none;">Дальше</button> 
-    </div>
-
-    <div id="div-one-face" style="display: none">
-        <span>У Вас единственный учредитель и он же директор (генеральный директор)?</span><br>        
-        <label for="one-face-yes"><input id="one-face-yes" type="radio" name="one-face" value="one-face-yes">Да</label><br>
-        <label for="one-face-no"><input id="one-face-no" type="radio" name="one-face" value="one-face-no">Нет</label><br>
-        <button id="btn-back-one-face">Назад</button>
-        <button id="btn-next-one-face" style="display: none;">Дальше</button>  
-    </div>
-
-    <div id="div-szv-quest" style="display: none">
-        <span>Сдавали ли Вы форму СЗВ-М?</span><br>        
-        <label for="szv-quest-yes"><input id="szv-quest-yes" type="radio" name="szv-quest" value="szv-quest-yes">Да</label><br>
-        <label for="szv-quest-no"><input id="szv-quest-no" type="radio" name="szv-quest" value="szv-quest-no">Нет</label><br>
-        <div id="choice-months" style="display: none">
-            <i><span>Выберите период, за который сдавался отчет:</span></i><br>
-        </div> 
-        <button id="btn-back-szv-quest">Назад</button>
-        <button id="btn-next-szv-quest" style="display: none;">Дальше</button>  
-    </div>
-
     <div id="div-will-send" style="display: none">
         <span id="span-we-will-send">Мы за Вас подготовим:</span>
         <!-- <span id="span-we-will-send-2017" style="display: none;">Мы за Вас подготовим за 2-й квартал 2017 года</span> -->
@@ -221,7 +202,9 @@ $(function () {
     </div>
 
 </form>
-
+</div>
+</div>
+</div>
 
 </body>
 </html>

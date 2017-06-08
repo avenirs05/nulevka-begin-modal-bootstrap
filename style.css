@@ -11,6 +11,14 @@ a {
 	text-decoration: none;	
 }
 
+input[type="radio"] {
+	margin-right: 7px;
+}
+
+input[type="checkbox"] {
+	margin-right: 7px;
+}
+
 /*.colors {
 	синий: #028090;
 	красный: #E7382B;
@@ -104,6 +112,7 @@ a {
 	font-weight: 700;
 	font-family: 'Open Sans Condensed', sans-serif;
 	margin-top: 20px;
+    letter-spacing: 2px;
 }
 
 .main-screen h3 {
@@ -111,6 +120,7 @@ a {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 600;
 	margin-top: 0px;
+	letter-spacing: 2px;
 }
 
 .main-screen .ipad {
@@ -191,6 +201,14 @@ a {
 	color: #ffffff;
 }
 
+/*Страница Company*/
+.questions-wrapper {
+	padding-left: 70px;
+	padding-right: 70px;
+	font-size: 16px;
+	margin-top: 20px; 
+}
+
 /*Начало. Переопределенные стили Bootstrap.*/
 
 .modal-backdrop.in {
@@ -200,13 +218,17 @@ a {
 /*Конец. Переопределенные стили Bootstrap.*/
 
 @media screen and (max-device-width: 1365px) {
+	.main-screen h3 {
+		letter-spacing: normal;
+	}
+
 	.main-screen ul {
 		font-size: 22px;
 	}
 	.main-screen li img {
 		width: 25px;
 		height: 36px;
-	}
+	}	
 }
 
 

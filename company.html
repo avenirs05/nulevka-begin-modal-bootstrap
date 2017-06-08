@@ -33,17 +33,33 @@ $(function () {
 
 </script>    
     <style>
-        body {
-            padding-left: 10px;
-            padding-top: 10px;
-        }
+
     </style>
 </head>
 <body>
 
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col-md-12 visible-md-block visible-lg-block">
+            <img src="imgs/logo.png" alt="">
+            <div class="right-side">
+                <button>Бесплатная консультация</button>
+                <div class="cons-phone">
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+                    <span class="phone-digits">8 800 350 84 70</span> 
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid questions-wrapper">
+<div class="row">
+<div class="col-md-12 visible-md-block visible-lg-block">
+
 <form id="form-tax-system" action="">
     <div id="div-tax-system">
-        <span>Выберите систему налогообложения:</span><br>        
+        <span class="question">Выберите систему налогообложения:</span><br>        
         <label class="tax-system-answer" for="general"><input id="general" type="radio" name="tax-system" value="general">Общая</label><br>
         <div style="display: none" class="tax-answer-0"></div>  
         <div id="choice-quarters" style="display: none"><i><span>Выберите период</span></i><br>
@@ -84,7 +100,7 @@ $(function () {
     </div>
     
     <div id="div-tranz" style="display: none">
-        <span>Были ли движения по расчетному счету?</span><br>
+        <span class="question">Были ли движения по расчетному счету?</span><br>
         <label for="tranz-yes"><input id="tranz-yes" type="radio" name="tranz" value="tranz-yes">Да</label><br>
         <label for="tranz-no"><input id="tranz-no" type="radio" name="tranz" value="tranz-no">Нет</label><br>
         <button id="btn-back-tranz">Назад</button> 
@@ -92,7 +108,7 @@ $(function () {
     </div>
 
     <div id="div-base" style="display: none">
-        <span>Какая у Вас база налогообложения?</span><br>
+        <span class="question">Какая у Вас база налогообложения?</span><br>
         <label for="base-inc"><input id="base-inc" type="radio" name="base" value="base-inc">Доходы</label><br>
         <label for="base-inc-spent"><input id="base-inc-spent" type="radio" name="base" value="base-inc-spent">Доходы минус расходы</label><br>
         <button id="btn-back-base">Назад</button> 
@@ -100,7 +116,7 @@ $(function () {
     </div>
 
     <div id="div-one-face" style="display: none">
-        <span>У Вас единственный учредитель и он же директор (генеральный директор)?</span><br>        
+        <span class="question">У Вас единственный учредитель и он же директор (генеральный директор)?</span><br>        
         <label for="one-face-yes"><input id="one-face-yes" type="radio" name="one-face" value="one-face-yes">Да</label><br>
         <label for="one-face-no"><input id="one-face-no" type="radio" name="one-face" value="one-face-no">Нет</label><br>
         <button id="btn-back-one-face">Назад</button>
@@ -108,7 +124,7 @@ $(function () {
     </div>
 
     <div id="div-szv-quest" style="display: none">
-        <span>Сдавали ли Вы форму СЗВ-М?</span><br>        
+        <span class="question">Сдавали ли Вы форму СЗВ-М?</span><br>        
         <label for="szv-quest-yes"><input id="szv-quest-yes" type="radio" name="szv-quest" value="szv-quest-yes">Да</label><br>
         <label for="szv-quest-no"><input id="szv-quest-no" type="radio" name="szv-quest" value="szv-quest-no">Нет</label><br>
         <div id="choice-months" style="display: none">
@@ -196,11 +212,10 @@ $(function () {
 	        </div>
 	    </div>
 	</div>
-
-
-
 </form>
-
+</div>
+</div>
+</div>
 
 </body>
 </html>
