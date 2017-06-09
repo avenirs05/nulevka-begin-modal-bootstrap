@@ -22,6 +22,7 @@
     <script src="functions-company.js"></script>
     <script src="functions-general.js"></script>
     <script src="events-company.js"></script>
+    <script src="events-general.js"></script>
 <!--     <script src="events-person.js"></script> -->
 
 <script>
@@ -38,12 +39,29 @@ $(function () {
 </head>
 <body>
 
+<div class="modal fade" id="modal-free-consult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+            </div>
+            <div class="modal-body">
+                <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
+                <div><div>Телефон</span></div><input id="phone-envd" type="text" name="phone-envd"></div>
+                <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
+                <input type="submit" value="Отправить" name="submit-envd"></input>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid header">
     <div class="row">
         <div class="col-md-12 visible-md-block visible-lg-block">
-            <img src="imgs/logo.png" alt="">
+            <a href="index.html"><img src="imgs/logo.png" alt=""></a>
             <div class="right-side">
-                <button>Бесплатная консультация</button>
+                <button id="btn-free-consult">Бесплатная консультация</button>
                 <div class="cons-phone">
                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
                     <span class="phone-digits">8 800 350 84 70</span> 
@@ -92,8 +110,8 @@ $(function () {
         </div>  
         <label class="tax-system-answer" for="simple"><input id="simple" type="radio" name="tax-system" value="simple">Упрощенная</label><br>
         <div style="display: none" class="tax-answer-1"></div>        
-        <label class="tax-system-answer" for="envd"><input id="envd" type="radio" name="tax-system" value="envd">Другая<br></label><br>
-        <div style="display: none" class="tax-answer-2">Контент если выбрано Другая</div>        
+        <label class="tax-system-answer" for="envd"><input id="envd" type="radio" name="tax-system" value="envd">ЕНВД<br></label><br>
+        <div style="display: none" class="tax-answer-2">Контент если выбрано ЕНВД</div>        
         <label class="tax-system-answer" for="not-know"><input id="not-know" type="radio" name="tax-system" value="not-know">Я не знаю</label><br>
         <div style="display: none" class="tax-answer-3">Контент если выбрано Я не знаю какая система налоговая</div>        
         <button id="btn-next-tax-system" style="display: none;">Дальше</button>

@@ -299,6 +299,8 @@ input[type="checkbox"] {
 	font-weight: bold;
 }
 
+/*Форма От Клиента Если Общая или Упрощ. - ООО */
+
 #div-from-customer {
 	margin-top: 25px;
 	width: 410px;
@@ -347,6 +349,61 @@ input[type="checkbox"] {
 	background-color: #B03A32;
 }
 
+/*Конец. Форма От Клиента Если Общая или Упрощ. - ООО */
+
+
+/*Форма ИП - От Клиента Если Общая или Упрощ. - ИП */
+
+#div-from-customer-ip {
+	margin-top: 25px;
+	width: 410px;
+	background-color: #F1F1F1;
+	padding-top: 10px;
+	padding-left: 30px;
+	border-radius: 2px;
+}
+
+#div-from-customer-ip input[type="text"] {
+	width: 350px;
+	height: 35px;
+}
+
+#div-from-customer-ip > div {
+	margin-top: 20px;
+}
+
+#div-from-customer-ip > div > div {
+	color: #028090;
+	font-weight: bold;
+}
+
+#div-from-customer-ip input[type="submit"] {
+	background-color: #E7382B;
+	color: #ffffff;
+	width: 216px;
+	height: 40px;
+	border: medium none;
+	border-radius: 2px;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+#div-from-customer-ip input[type="submit"]:hover {
+	background-color: #339933;
+}
+
+#div-from-customer-ip button {
+	margin-top: 25px;
+}
+
+#div-from-customer-ip button:hover {
+	background-color: #B03A32;
+}
+
+/*Конец. ИП - Форма От Клиента Если Общая или Упрощ. - ИП */
+
 #div-years {
 	margin-top: 5px;
 }
@@ -358,19 +415,61 @@ input[type="checkbox"] {
 	color: #A52A2A;
 }
 
-
-
-
-
-
-
 /*Конец. Страницы Company и Person*/
 
 
 /*Начало. Переопределенные стили Bootstrap.*/
 
 .modal-backdrop.in {
-	opacity: .5;
+	opacity: .7;
+}
+
+.modal-dialog {
+	width: 450px;
+}
+
+.modal-content {
+	background-color: #F1F1F1;
+}
+
+.modal-body input[type="text"] {
+	width: 416px;
+	height: 35px;
+	/*background-color: #F1F1F1;*/
+}
+
+.modal-body > div {
+	margin-top: 20px;
+}
+
+.modal-body > div > div {
+	color: #028090;
+	font-weight: bold;
+}
+
+.modal-body input[type="submit"] {
+	background-color: #E7382B;
+	color: #ffffff;
+	width: 418px;
+	height: 60px;
+	border: medium none;
+	border-radius: 2px;
+	font-size: 28px;
+	margin-bottom: 5px;
+	margin-top: 20px;
+	letter-spacing: 1px;
+}
+
+.modal-body input[type="submit"]:hover {
+	background-color: #339933;
+}
+
+.modal-body button:hover {
+	background-color: #B03A32;
+}
+
+.modal-body > div:first-child {
+	margin-top: 5px;
 }
 
 /*Конец. Переопределенные стили Bootstrap.*/

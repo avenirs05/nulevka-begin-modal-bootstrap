@@ -22,6 +22,7 @@
     <script src="functions-general.js"></script>
     <script src="functions-person.js"></script>
     <script src="events-person.js"></script>
+    <script src="events-general.js"></script>
 
 
 <script>
@@ -38,12 +39,29 @@ $(function () {
 </head>
 <body>
 
+<div class="modal fade" id="modal-free-consult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+            </div>
+            <div class="modal-body">
+                <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
+                <div><div>Телефон</span></div><input id="phone-envd" type="text" name="phone-envd"></div>
+                <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
+                <input type="submit" value="Отправить" name="submit-envd"></input>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid header">
     <div class="row">
         <div class="col-md-12 visible-md-block visible-lg-block">
-            <img src="imgs/logo.png" alt="">
+            <a href="index.html"><img src="imgs/logo.png" alt=""></a>
             <div class="right-side">
-                <button>Бесплатная консультация</button>
+                <button id="btn-free-consult">Бесплатная консультация</button>
                 <div class="cons-phone">
                     <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
                     <span class="phone-digits">8 800 350 84 70</span> 
@@ -59,8 +77,7 @@ $(function () {
 
 <form id="form-tax-system" action="">
     <div id="div-tax-system">
-        <span id="span-choice-tax-system" class="question" >Выберите систему налогообложения:</span><br> 
-
+        <span id="span-choice-tax-system" class="question" >Выберите систему налогообложения:</span><br>
         <label id="label-choice-tax-system" class="tax-system-answer" for="simple-ip"><input id="simple-ip" type="radio" name="tax-system" value="simple-ip">Упрощенная</label><br>
         <div style="display: none" class="tax-answer-1"></div>
         <div id="choice-years" style="display: none">
@@ -104,7 +121,6 @@ $(function () {
     
     <div id="div-will-send" style="display: none">
         <span id="span-we-will-send">Мы за Вас подготовим:</span>
-        <!-- <span id="span-we-will-send-2017" style="display: none;">Мы за Вас подготовим за 2-й квартал 2017 года</span> -->
         <div style="display: none;">
             <label for='decl-nds'><input id='decl-nds' type='checkbox' name='decl-nds' checked><strong>Налоговая декларация по НДС</strong></label>
         </div>
