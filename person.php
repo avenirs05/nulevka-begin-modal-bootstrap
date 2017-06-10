@@ -39,22 +39,62 @@ $(function () {
 </head>
 <body>
 
-<div class="modal fade" id="modal-free-consult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
-            </div>
-            <div class="modal-body">
-                <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
-                <div><div>Телефон</span></div><input id="phone-envd" type="text" name="phone-envd"></div>
-                <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
-                <input type="submit" value="Отправить" name="submit-envd"></input>
+    <div class="modal fade" id="modal-envd-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Согласно письму Минфина РФ от 01.01.2011г. № 777 нулевая отчетность по ЕНВД не предусмотрена. Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="get" action="handler.php">
+                        <div><div>Имя</div><input id="name-envd" type="text" name="name-envd-ip"></div>
+                        <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-envd-ip"></div>
+                        <div><div>Email</div><input id="email-envd" type="text" name="email-envd-ip"></div>
+                        <input type="submit" value="Отправить" name="submit-envd-ip">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="modal fade" id="modal-patent-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Согласно письму Минфина РФ от 01.01.2011г. № 777 при использовании данной системы налогообложения нулевая отчетность не предусмотрена. Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="get" action="handler.php">
+                        <div><div>Имя</div><input id="name-envd" type="text" name="name-patent-ip"></div>
+                        <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-patent-ip"></div>
+                        <div><div>Email</div><input id="email-envd" type="text" name="email-patent-ip"></div>
+                        <input type="submit" value="Отправить" name="submit-patent-ip">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-not-know-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="get" action="handler.php">
+                        <div><div>Имя</div><input id="name-envd" type="text" name="name-not-know-ip"></div>
+                        <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-not-know-ip"></div>
+                        <div><div>Email</div><input id="email-envd" type="text" name="email-not-know-ip"></div>
+                        <input type="submit" value="Отправить" name="submit-not-know-ip">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="container-fluid header">
     <div class="row">
@@ -75,7 +115,7 @@ $(function () {
 <div class="row">
 <div class="col-md-12 visible-md-block visible-lg-block">
 
-<form id="form-tax-system" action="">
+<form id="form-tax-system" action="handler.php" method="post" novalidate>
     <div id="div-tax-system">
         <span id="span-choice-tax-system" class="question" >Выберите систему налогообложения:</span><br>
         <label id="label-choice-tax-system" class="tax-system-answer" for="simple-ip"><input id="simple-ip" type="radio" name="tax-system" value="simple-ip">Упрощенная</label><br>
@@ -116,7 +156,7 @@ $(function () {
         <label class="tax-system-answer" for="not-know-ip"><input id="not-know-ip" type="radio" name="tax-system" value="not-know-ip">Я не знаю</label><br>
         <div style="display: none" class="tax-answer-4"></div><br>
 
-        <button id="btn-next-tax-system-ip" style="display: none;">Дальше</button>
+        <button id="btn-next-tax-system-ip" style="display: none;" onclick="return false;">Дальше</button>
     </div>
     
     <div id="div-will-send" style="display: none">
@@ -152,8 +192,8 @@ $(function () {
         <div><div>Дата выдачи</div><input id="pasp-date-issue-ip" type="text" name="pasp-date-issue-ip"></div>
         <div><div>Кем выдан</div><input id="pasp-who-issue-ip" type="text" name="pasp-who-issue-ip"></div>
         <div><div>Код подразделения</div><input id="pasp-kp-ip" type="text" name="pasp-kp-ip"></div>        
-        <button id="btn-back-will-send-ip">Назад</button>
-        <input type="submit" value="Перейти к оплате" name="go-to-pay-ip" disabled></input>
+        <button id="btn-back-will-send-ip" onclick="return false;">Назад</button>
+        <input type="submit" value="Перейти к оплате" name="go-to-pay-ip">
     </div>
 
     <div id="dialog-callback" title="" style="display: none;">
@@ -164,57 +204,6 @@ $(function () {
                 <input type="text" name="phone" placeholder="Введите номер телефона" required>
                 <input type="submit" value="Отправить">
         </form>
-    </div>
-
-	<div class="modal fade" id="modal-envd-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	            <div class="modal-header">
-		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		            <h4 class="modal-title" id="myModalLabel">Согласно письму Минфина РФ от 01.01.2011г. № 777 нулевая отчетность по ЕНВД не предусмотрена. Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
-	            </div>
-	            <div class="modal-body">
-					<div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
-					<div><div>Телефон</div><input id="phone-envd" type="text" name="phone-envd"></div>
-					<div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
-					<input type="submit" value="Отправить" name="submit-envd"></input>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-
-    <div class="modal fade" id="modal-patent-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Согласно письму Минфина РФ от 01.01.2011г. № 777 при использовании данной системы налогообложения нулевая отчетность не предусмотрена. Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
-                </div>
-                <div class="modal-body">
-                    <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
-                    <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-envd"></div>
-                    <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
-                    <input type="submit" value="Отправить" name="submit-envd"></input>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-not-know-ip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
-                </div>
-                <div class="modal-body">
-                    <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
-                    <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-envd"></div>
-                    <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
-                    <input type="submit" value="Отправить" name="submit-envd"></input>
-                </div>
-            </div>
-        </div>
     </div>
 
 </form>

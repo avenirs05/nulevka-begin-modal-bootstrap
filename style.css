@@ -438,13 +438,14 @@ input[type="checkbox"] {
 	/*background-color: #F1F1F1;*/
 }
 
-.modal-body > div {
+.modal-body form > div {
 	margin-top: 20px;
 }
 
-.modal-body > div > div {
+.modal-body > form > div > div {
 	color: #028090;
 	font-weight: bold;
+	font-size: 18px;
 }
 
 .modal-body input[type="submit"] {

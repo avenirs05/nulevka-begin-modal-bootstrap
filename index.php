@@ -36,10 +36,10 @@
                 <h4 class="modal-title" id="myModalLabel">Заполните данные ниже и мы вас проконсультируем по этому вопросу.</h4>
             </div>
             <div class="modal-body">
-                <div><div>Имя</div><input id="name-envd" type="text" name="name-envd"></div>
-                <div><div>Телефон</span></div><input id="phone-envd" type="text" name="phone-envd"></div>
-                <div><div>Email</div><input id="email-envd" type="text" name="email-envd"></div>
-                <input type="submit" value="Отправить" name="submit-envd"></input>
+                <div><div>Имя</div><input id="name-envd" type="text" name="name-free-consult" form="form-tax-system"></div>
+                <div><div>Телефон</div><input id="phone-envd" type="text" name="phone-free-consult" form="form-tax-system"></div>
+                <div><div>Email</div><input id="email-envd" type="text" name="email-free-consult" form="form-tax-system"></div>
+                <input type="submit" value="Отправить" name="submit-free-consult" form="form-tax-system">
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
 <div class="container-fluid header">
     <div class="row">
         <div class="col-md-12 visible-md-block visible-lg-block">
-            <a href="index"><img src="imgs/logo.png" alt=""></a>
+            <a href="index.php"><img src="imgs/logo.png" alt=""></a>
             <div class="right-side">
                 <button id="btn-free-consult">Бесплатная консультация</button>
                 <div class="cons-phone">
@@ -82,8 +82,8 @@
         </div> 
         <div class="col-md-7">
             <div class="ipad">
-                <a href="company.html" target="_blank"><button class="btn-inside-ipad-1">Сделать нулевку для ООО</button></a>
-                <a href="person.html" target="_blank"><button class="btn-inside-ipad-1 btn-inside-ipad-2">Сделать нулевку для ИП</button></a>
+                <a href="company.php" target="_blank"><button class="btn-inside-ipad-1">Сделать нулевку для ООО</button></a>
+                <a href="person.php" target="_blank"><button class="btn-inside-ipad-1 btn-inside-ipad-2">Сделать нулевку для ИП</button></a>
                 <a href="#" target="_blank"><button class="btn-inside-ipad-1 btn-inside-ipad-3">Сделать нулевку для ИП</button>
             </div>         
         </div>
